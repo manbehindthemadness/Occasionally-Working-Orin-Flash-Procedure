@@ -16,6 +16,8 @@
 ## sudo docker tag sdkmanager:1.9.1.10844-Ubuntu_18.04 sdkmanager:latest ###
 ############################################################################
 
+read -p "Welcome to the single most terrible, mind-crushing, nightmarish, and horrible flashing utility ever designed. Lets get started..."
+
 echo listing possible commands:
 sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave--rm sdkmanager --query
 
@@ -35,4 +37,12 @@ read -p "A wired ethernet connection will be required for the post-image, pre-sd
 ############################################################################
 ########################## INSTALL FULL SYSTEM #############################
 ############################################################################
-# sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --cli install --logintype devzone --staylogin true --product Jetson --version 5.0.2 --targetos Linux --host --target JETSON_AGX_ORIN_TARGETS --flash all --additionalsdk 'DeepStream 6.1.1' --exportlogs /var/log --license accept
+sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --cli install --logintype devzone --staylogin true --product Jetson --version 5.0.2 --targetos Linux --host --target JETSON_AGX_ORIN_TARGETS --flash all --additionalsdk 'DeepStream 6.1.1' --exportlogs /var/log --license accept
+
+echo At this point you have probably experienced a weird failure: FEAR NOT! The nvidia sdkmanager is completely unstable, so just re-run this script! There is an 80% probability you will achieve different results!
+
+echo .
+echo .
+echo .
+
+echo Disclaimer: There is also an 80% probability that the new result will be another form of failure.
