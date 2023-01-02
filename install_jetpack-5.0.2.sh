@@ -8,7 +8,7 @@
 ######## ENSURE YOU HAVE SETUP A USERNAME AND PASSWORD ON THE ORIN #########
 ################ YOU WILL BE PROMPTED FOR IT DURING SETUP ##################
 ############################################################################
-############### DOWNLOAD DOCKER IMAGE HERE: USE 18.04 ######################
+############### DOWNLOAD DOCKER IMAGE HERE: USE 20.04 ######################
 ############ https://developer.nvidia.com/drive/sdk-manager ################
 ############################################################################
 ############## USE THESE TO LOAD THE DOWNLOADED IMAGE ######################
