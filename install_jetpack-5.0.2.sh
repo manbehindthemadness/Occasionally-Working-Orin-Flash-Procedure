@@ -12,8 +12,8 @@
 ############ https://developer.nvidia.com/drive/sdk-manager ################
 ############################################################################
 ############## USE THESE TO LOAD THE DOWNLOADED IMAGE ######################
-## sudo docker load -i ./sdkmanager-1.9.1.10844-Ubuntu_18.04_docker.tar.gz #
-## sudo docker tag sdkmanager:1.9.1.10844-Ubuntu_18.04 sdkmanager:latest ###
+## sudo docker load -i ./sdkmanager-1.9.1.10844-Ubuntu_20.04_docker.tar.gz #
+## sudo docker tag sdkmanager:1.9.1.10844-Ubuntu_20.04 sdkmanager:latest ###
 ############################################################################
 
 read -p "Welcome to the single most terrible, mind-crushing, nightmarish, and horrible flashing utility ever designed. Lets get started..."
@@ -34,10 +34,12 @@ read -p "Ensure USB power management is disabled on the host"
 
 read -p "A wired ethernet connection will be required for the post-image, pre-sdk install"
 
+read -p "Actually scratch that, skip the install of the nvidia sdk components, perform an apt-get update then a reboot followed by apt-get install nvidia-jetpack"
+
 ############################################################################
 ########################## INSTALL FULL SYSTEM #############################
 ############################################################################
-sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --cli install --logintype devzone --staylogin true --product Jetson --version 5.0.2 --targetos Linux --host --target JETSON_AGX_ORIN_TARGETS --flash all --additionalsdk 'DeepStream 6.1.1' --exportlogs /var/log --license accept
+sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --cli install --logintype devzone --product Jetson --version Runtime_5.0.2 --targetos Linux --host --target JETSON_AGX_ORIN_TARGETS --flash all --license accept --checkforupdates force
 
 echo At this point you have probably experienced a weird failure: FEAR NOT! The nvidia sdkmanager is completely unstable, so just re-run this script! There is an 80% probability you will achieve different results!
 
