@@ -49,5 +49,6 @@ echo .
 
 echo Disclaimer: There is also an 80% probability that the new result will be another form of failure.
 
-## if attempting to boot from SSD see the following: https://forums.developer.nvidia.com/t/how-to-add-nvme-as-boot-option-in-uefi/230593
+## If attempting to boot from SSD see the following: https://forums.developer.nvidia.com/t/how-to-add-nvme-as-boot-option-in-uefi/230593
 ## Installing to nvme via sdkmanager doesn't work (go figure), instead just DD the partition: dd bs=4M if=/dev/mmcblk0 of=/dev/nvme0n1 status=progress
+## Do ensure to edit the /boot/extlinux/extlinux.conf file and change /dev/mmcblk0p1 to /dev/nvme0n1p1
