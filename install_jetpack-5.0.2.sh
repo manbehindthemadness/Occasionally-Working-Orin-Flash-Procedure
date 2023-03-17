@@ -19,7 +19,7 @@
 read -p "Welcome to the single most terrible, mind-crushing, nightmarish, and horrible flashing utility ever designed. Lets get started..."
 
 echo listing possible commands:
-sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave--rm sdkmanager --query
+sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --query
 
 echo detecting connected devices...
 sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --listconnected all
