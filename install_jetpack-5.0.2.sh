@@ -42,7 +42,7 @@ read -p "Actually scratch that, skip the install of the nvidia sdk components, p
 ############################################################################
 ########################## INSTALL FULL SYSTEM #############################
 ############################################################################
-sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --cli install --logintype devzone --product Jetson --version Runtime_5.0.2 --targetos Linux --host --target JETSON_AGX_ORIN_TARGETS --flash all --license accept --checkforupdates force
+sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev -v /media/$USER:/media/nvidia:slave --rm sdkmanager --cli install --logintype devzone --product Jetson --version Runtime_5.1.1 --targetos Linux --host --target JETSON_AGX_ORIN_TARGETS --flash all --license accept --checkforupdates force
 
 echo At this point you have probably experienced a weird failure: FEAR NOT! The nvidia sdkmanager is completely unstable, so just re-run this script! There is an 80% probability you will achieve different results!
 
