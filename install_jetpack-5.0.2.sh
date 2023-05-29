@@ -1,6 +1,9 @@
 #!/bin/bash
 # https://docs.nvidia.com/sdk-manager/sdkm-command-line-install/index.html#command-line-install
 
+# IMPORTANT IF WE CANNOT GET INTO RECOVERY MODE: sudo reboot forced-recovery
+
+
 ############################################################################
 ######## THIS SCRIPT CANNOT RUN ON WINDOWS AS THERE IS NO USB ##############
 ########## ELEVATION FROM COMMAND LINE (THAT I AM AWARE OF) ################
